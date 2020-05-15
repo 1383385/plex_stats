@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/tfursten/flex_stats.svg?branch=master)](https://travis-ci.com/tfursten/flex_stats)
+[![Build Status](https://travis-ci.com/tfursten/plex_stats.svg?branch=master)](https://travis-ci.com/tfursten/plex_stats)
 
 # Plex Stats
 This tool provides primer stats for multiplex PCR primers.
