@@ -1,0 +1,47 @@
+{% set name = "plex_stats" %}
+
+
+package:
+  name: {{ name }}
+  version: {{ environ['VERSION'] }}
+
+source:
+  path: ../
+
+
+build:
+  script_env:
+     - VERSION
+     - CONDA_BLD_PATH
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  host:
+    - python
+    - pip
+    - click
+  run:
+    - python
+    - biopython
+    - click
+    - numpy
+    - pandas
+
+test:
+  commands:
+    plex-stats --help > /dev/null
+
+
+about:
+  home: https://github.com/tfursten/plex_stats
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  summary: 'Primer stats for multiplex PCR'
+  description: |
+    Calculates primer stats for multiplex PCR primers.
+
+extra:
+  recipe_maintainers: tfursten
