@@ -14,10 +14,10 @@ setup(
     install_requires=[
         'Click',
     ],
-    packages=['primer_stats'],
+    packages=['plex_stats'],
     entry_points='''
         [console_scripts]
-        plex_stats=plex_stats.__main__:cli
+        plex-stats=plex_stats.__main__:cli
     ''',
     long_description=long_description,
     long_description_content_type='text/markdown',
