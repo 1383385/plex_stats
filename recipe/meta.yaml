@@ -28,6 +28,8 @@ requirements:
     - click
     - numpy
     - pandas
+    - matplotlib
+    - seaborn
 
 test:
   commands:
