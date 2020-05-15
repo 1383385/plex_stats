@@ -1,6 +1,6 @@
 import click
 import os
-from primer_stats.primer_stats import get_primer_stats
+from plex_stats.primer_stats import get_primer_stats
 
 
 
