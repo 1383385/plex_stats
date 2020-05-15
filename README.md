@@ -50,7 +50,7 @@ Options:
 
 ## Build
 ```
-conda build . -c bioconda
+bash recipe/conda_build.sh
 ```
 
 
