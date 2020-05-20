@@ -1,7 +1,17 @@
-[![Build Status](https://travis-ci.com/tfursten/flex_stats.svg?branch=master)](https://travis-ci.com/tfursten/flex_stats)
+[![Build Status](https://travis-ci.com/tfursten/plex_stats.svg?branch=master)](https://travis-ci.com/tfursten/plex_stats)
 
 # Plex Stats
 This tool provides primer stats for multiplex PCR primers.
+
+## Install
+
+```
+conda install --yes --strict-channel-priority --override-channels --channel conda-forge --channel bioconda --channel defaults --channel Tara_Furstenau plex_stats
+```
+Install in conda environment
+```
+conda create --yes --strict-channel-priority --override-channels --channel conda-forge --channel bioconda --channel defaults --channel Tara_Furstenau --name <ENV_NAME> plex_stats
+```
 
 ## Input
 The primers should be provided in FASTA format. IUPAC ambiguous DNA values are accepted and all of the possible primers will be generated before running the statistics (A suffix, like "_1", will be added to the degenerate primer name for each expanded version).
@@ -34,8 +44,8 @@ The remaining columns are the values for all of the pairwise interactions betwee
 
 ## Usage
 ```
-primer-stats --help            
-Usage: primer-stats [OPTIONS] PRIMER_FASTA
+$ plex-stats --help
+Usage: plex-stats [OPTIONS] PRIMER_FASTA
 
 Options:
   -o, --outpath DIRECTORY        Output directory.
@@ -50,7 +60,7 @@ Options:
 
 ## Build
 ```
-conda build . -c bioconda
+bash recipe/conda_build.sh
 ```
 
 
