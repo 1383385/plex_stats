@@ -14,7 +14,7 @@ build:
      - VERSION
      - CONDA_BLD_PATH
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -28,8 +28,9 @@ requirements:
     - click
     - numpy
     - pandas
-    - matplotlib
     - seaborn
+    - xlsxwriter
+    - jinja2
 
 test:
   commands:
